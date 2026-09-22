@@ -16,8 +16,8 @@
     .wrap { width:min(1160px,calc(100% - 40px)); margin:auto; }
     header { position:sticky; top:0; z-index:10; background:rgba(248,247,241,.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
     nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:800; letter-spacing:-.02em; }
-    .mark { width:40px; height:40px; display:grid; place-items:center; border-radius:11px; color:var(--gold); background:var(--ink); font:800 21px Georgia,serif; }
+    .brand { display:flex; align-items:center; text-decoration:none; }
+    .brand img { width:180px; height:auto; display:block; }
     .navlinks { display:flex; align-items:center; gap:28px; }
     .navlinks a { text-decoration:none; font-size:.94rem; font-weight:650; }
     .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:50px; padding:0 22px; border-radius:999px; border:1px solid var(--ink); background:var(--ink); color:#fff; text-decoration:none; font-weight:750; transition:.2s ease; }
@@ -92,7 +92,7 @@
     }
     @media (max-width:520px) {
       .wrap { width:min(100% - 28px,1160px); }
-      .brand span:last-child { display:none; }
+      .brand img { width:150px; }
       .navlinks { gap:0; }
       h1 { font-size:3.1rem; }
       section { padding:68px 0; }
@@ -104,7 +104,7 @@
 <body>
   <header>
     <nav class="wrap" aria-label="Main navigation">
-      <a class="brand" href="#top"><span class="mark">P</span><span>Prehn Consulting</span></a>
+      <a class="brand" href="#top" aria-label="Prehn Consulting"><img src="Logo (4).png" alt="Prehn Consulting"></a>
       <div class="navlinks">
         <a href="#services" data-i18n="navServices">Services</a>
         <a href="#about" data-i18n="navAbout">About us</a>
