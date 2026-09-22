@@ -8,7 +8,7 @@
   <title>Prehn Consulting | Practical IT for the Bollenstreek</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23133233'/%3E%3Cpath d='M18 47V17h15c9 0 15 5 15 13S42 43 33 43h-7v4zm8-12h7c4 0 7-2 7-5s-3-5-7-5h-7z' fill='%23f4b860'/%3E%3C/svg%3E">
   <style>
-    :root { --ink:#133233; --paper:#f8f7f1; --white:#fff; --gold:#f4b860; --aqua:#cce4df; --muted:#5d6b68; --line:rgba(19,50,51,.14); }
+    :root { --ink:#172a4d; --paper:#f4f8fc; --white:#fff; --gold:#fff; --aqua:#dcecf8; --muted:#5c6b80; --line:rgba(23,42,77,.14); }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; }
@@ -29,12 +29,12 @@
     .eyebrow { display:inline-flex; gap:9px; align-items:center; font-size:.82rem; font-weight:800; text-transform:uppercase; letter-spacing:.11em; }
     .eyebrow::before { content:""; width:28px; height:3px; background:var(--gold); }
     h1 { max-width:780px; margin:20px 0 24px; font:700 clamp(3rem,6vw,5.7rem)/.98 Georgia,serif; letter-spacing:-.055em; }
-    h1 em { color:#2e716a; font-style:normal; }
+    h1 em { color:#5b86b4; font-style:normal; }
     .lead { max-width:650px; color:var(--muted); font-size:clamp(1.08rem,2vw,1.28rem); }
     .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
     .trust { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:28px; color:var(--muted); font-size:.91rem; }
-    .trust span::before { content:"✓"; margin-right:8px; color:#2e716a; font-weight:900; }
-    .diagnostic { padding:30px; border:1px solid var(--line); border-radius:28px; background:var(--white); box-shadow:0 30px 70px rgba(19,50,51,.10); transform:rotate(1.5deg); }
+    .trust span::before { content:"✓"; margin-right:8px; color:#5b86b4; font-weight:900; }
+    .diagnostic { padding:30px; border:1px solid var(--line); border-radius:28px; background:var(--white); box-shadow:0 30px 70px rgba(23,42,77,.10); transform:rotate(1.5deg); }
     .diagnostic h2 { margin:6px 0 22px; font:700 2rem/1.1 Georgia,serif; }
     .question { padding:17px 0; border-top:1px solid var(--line); display:flex; gap:13px; align-items:flex-start; }
     .number { flex:0 0 28px; height:28px; display:grid; place-items:center; border-radius:50%; background:var(--aqua); font-weight:800; font-size:.82rem; }
@@ -47,33 +47,32 @@
     .dark .section-head p { color:#cbd8d5; }
     .services { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
     .service { min-height:275px; padding:30px; border:1px solid rgba(255,255,255,.14); border-radius:22px; background:rgba(255,255,255,.045); }
-    .service:nth-child(2),.service:nth-child(3) { background:rgba(204,228,223,.11); }
+    .service:nth-child(2),.service:nth-child(3) { background:rgba(220,236,248,.12); }
     .icon { width:48px; height:48px; display:grid; place-items:center; border-radius:13px; color:var(--ink); background:var(--gold); font-size:1.25rem; font-weight:900; }
     .service h3 { margin:30px 0 10px; font:700 1.55rem Georgia,serif; }
     .service p { margin:0; color:#cbd8d5; }
     .service ul { padding-left:18px; color:#e6ecea; }
     .process { display:grid; grid-template-columns:repeat(3,1fr); gap:38px; counter-reset:step; }
     .step { counter-increment:step; position:relative; padding-top:74px; }
-    .step::before { content:"0" counter(step); position:absolute; top:0; color:#2e716a; font:700 3.5rem/1 Georgia,serif; }
+    .step::before { content:"0" counter(step); position:absolute; top:0; color:#5b86b4; font:700 3.5rem/1 Georgia,serif; }
     .step:not(:last-child)::after { content:""; position:absolute; top:28px; left:80px; right:-18px; border-top:1px dashed #91aaa5; }
     .step h3 { font:700 1.4rem Georgia,serif; }
     .step p { color:var(--muted); }
     .people { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
     .person { position:relative; overflow:hidden; padding:38px; border:1px solid var(--line); border-radius:26px; background:#fff; }
     .person::after { content:attr(data-initials); position:absolute; right:-8px; bottom:-36px; color:rgba(19,50,51,.045); font:700 9rem Georgia,serif; }
-    .role { color:#2e716a; font-weight:800; font-size:.84rem; text-transform:uppercase; letter-spacing:.08em; }
+    .role { color:#5b86b4; font-weight:800; font-size:.84rem; text-transform:uppercase; letter-spacing:.08em; }
     .person h3 { margin:10px 0 18px; font:700 2.2rem Georgia,serif; }
     .person p { position:relative; z-index:1; color:var(--muted); }
     .chips { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
     .chip { padding:7px 11px; border-radius:999px; background:var(--aqua); font-size:.78rem; font-weight:750; }
     .local { display:grid; grid-template-columns:.78fr 1.22fr; gap:52px; align-items:center; }
-    .local-card { min-height:360px; display:grid; place-items:center; border-radius:28px; overflow:hidden; background:linear-gradient(145deg,#cce4df,#a9d1c8); position:relative; }
-    .local-card::before { content:"BOLLENSTREEK"; width:245px; height:245px; display:grid; place-items:center; border:2px solid var(--ink); border-radius:50%; font:800 .9rem/1 sans-serif; letter-spacing:.18em; transform:rotate(-8deg); }
-    .local-card::after { content:"Lisse · Hillegom · Sassenheim · Noordwijk"; position:absolute; bottom:28px; font-size:.78rem; font-weight:700; }
+    .local-card { min-height:360px; border-radius:28px; overflow:hidden; background:#dcecf8; }
+    .local-card img { width:100%; height:100%; min-height:360px; display:block; object-fit:cover; }
     .local h2 { margin:0 0 20px; font:700 clamp(2.25rem,4vw,3.6rem)/1.05 Georgia,serif; }
     .local p { color:var(--muted); font-size:1.08rem; }
     .cta { padding:0 0 88px; }
-    .cta-box { display:grid; grid-template-columns:1fr auto; gap:34px; align-items:center; padding:55px; color:#fff; background:#2e716a; border-radius:30px; }
+    .cta-box { display:grid; grid-template-columns:1fr auto; gap:34px; align-items:center; padding:55px; color:#fff; background:#5b86b4; border-radius:30px; }
     .cta h2 { margin:0 0 10px; font:700 clamp(2rem,4vw,3.3rem)/1.06 Georgia,serif; }
     .cta p { margin:0; color:#e2eeeb; }
     .cta .button { color:var(--ink); background:var(--gold); border-color:var(--gold); white-space:nowrap; }
@@ -109,7 +108,7 @@
       <div class="navlinks">
         <a href="#services" data-i18n="navServices">Services</a>
         <a href="#about" data-i18n="navAbout">About us</a>
-        <a class="button" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener" data-i18n="navCta">Free assessment</a>
+        <a class="button" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener" data-i18n="navCta">Book free assessment</a>
         <label class="sr-only" for="lang-switch" style="position:absolute;left:-9999px;">Language</label>
         <select id="lang-switch" class="lang-switch" aria-label="Select language">
           <option value="en" selected>EN</option>
@@ -169,17 +168,17 @@
 
     <section id="about">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow" data-i18n="aboutEyebrow">Meet us</span><h2 data-i18n="aboutTitle">Business understanding and deep technical experience.</h2><p data-i18n="aboutIntro">Two experienced technology professionals based in Lisse, combining practical business advice with the technical depth to build solutions that last.</p></div>
+        <div class="section-head"><span class="eyebrow" data-i18n="aboutEyebrow">About us</span><h2 data-i18n="aboutTitle">Business understanding and deep technical experience.</h2><p data-i18n="aboutIntro">Two experienced technology professionals based in Lisse, combining practical business advice with the technical depth to build solutions that last.</p></div>
         <div class="people">
-          <article class="person" data-initials="IV"><span class="role" data-i18n="person1Role">Business & solution consultant</span><h3>Ioana Vitu</h3><p data-i18n="person1Text">Ioana turns complicated business needs into practical solutions people can actually use. Her experience spans business analysis, process improvement, solution architecture, websites, AI-assisted development and hands-on delivery. She has led international projects in sales, finance, retail and regulated environments, but her focus here is simple: helping local small businesses work better without unnecessary complexity.</p><div class="chips"><span class="chip" data-i18n="person1Chip1">Websites</span><span class="chip" data-i18n="person1Chip2">Business processes</span><span class="chip" data-i18n="person1Chip3">AI & automation</span><span class="chip" data-i18n="person1Chip4">Digital solutions</span></div></article>
-          <article class="person" data-initials="TP"><span class="role" data-i18n="person2Role">Technical architect & developer</span><h3>Thomas Prehn</h3><p data-i18n="person2Text">Thomas is a senior technical architect, consultant and developer with more than 20 years of experience. He has designed and delivered business-critical digital solutions for organisations including Eneco, APG, De Nederlandsche Bank and the European Medicines Agency. He brings deep expertise in software development, cloud technology, automation, connected systems and complex integrations.</p><div class="chips"><span class="chip" data-i18n="person2Chip1">Technical architecture</span><span class="chip" data-i18n="person2Chip2">Software development</span><span class="chip" data-i18n="person2Chip3">Automation</span><span class="chip" data-i18n="person2Chip4">Cloud & integrations</span></div></article>
+          <article class="person" data-initials="IV"><span class="role" data-i18n="person1Role">Business & technical consultant</span><h3>Ioana Vitu</h3><p data-i18n="person1Text">I turn complicated business needs into practical solutions people can actually use. My experience spans business analysis, process improvement, solution architecture, websites, AI and hands-on delivery. I have worked with the European Medicines Agency, Nissan and Sonova, working in sales, finance and regulated sectors. Today, I help small businesses work better through technology, without unnecessary complexity.</p><div class="chips"><span class="chip" data-i18n="person1Chip1">Websites</span><span class="chip" data-i18n="person1Chip2">Business processes</span><span class="chip" data-i18n="person1Chip3">AI & automation</span><span class="chip" data-i18n="person1Chip4">Digital solutions</span></div></article>
+          <article class="person" data-initials="TP"><span class="role" data-i18n="person2Role">Technical architect & developer</span><h3>Thomas Prehn</h3><p data-i18n="person2Text">I am a senior technical architect, consultant and developer with more than 20 years of experience. I have designed and delivered business-critical digital solutions for organisations including Eneco, APG, De Nederlandsche Bank and the European Medicines Agency. I bring deep expertise in software development, cloud technology, automation, connected systems and complex integrations.</p><div class="chips"><span class="chip" data-i18n="person2Chip1">Technical architecture</span><span class="chip" data-i18n="person2Chip2">Software development</span><span class="chip" data-i18n="person2Chip3">Automation</span><span class="chip" data-i18n="person2Chip4">Cloud & integrations</span></div></article>
         </div>
       </div>
     </section>
 
     <section>
       <div class="wrap local">
-        <div class="local-card" aria-label="Serving the Bollenstreek"></div>
+        <div class="local-card"><img src="bollenstreek.jpg.png" alt="Colourful tulip fields in the Bollenstreek"></div>
         <div><span class="eyebrow" data-i18n="localEyebrow">Close by, easy to reach</span><h2 data-i18n="localTitle">IT help with a local face.</h2><p data-i18n="localText">We work with entrepreneurs and small businesses across the Bollenstreek. That means we can meet over coffee, understand how your business works in real life and stay close enough to help when you need us.</p><p><strong data-i18n="localServing">Serving Lisse, Hillegom, Sassenheim, Noordwijk, Voorhout and surrounding towns.</strong></p><a class="button light" href="mailto:ioana.vitu@hotmail.co.uk" data-i18n="localCta">Email Ioana</a></div>
       </div>
     </section>
@@ -198,7 +197,7 @@
       en: {
         navServices: 'Services',
         navAbout: 'About us',
-        navCta: 'Free assessment',
+        navCta: 'Book free assessment',
         eyebrowHero: 'Local IT help · Bollenstreek',
         heroTitle: 'Less admin.<br><em>More business.</em>',
         heroLead: 'We help small businesses replace scattered tools and repetitive work with clear websites, connected systems, useful AI and smart automation.',
@@ -257,17 +256,17 @@
         step2Text: 'We explain the best next step, the likely cost and what not to spend money on.',
         step3Title: 'Build & improve',
         step3Text: 'If it feels right, we implement the solution with you and keep it understandable.',
-        aboutEyebrow: 'Meet us',
+        aboutEyebrow: 'About us',
         aboutTitle: 'Business understanding and deep technical experience.',
         aboutIntro: 'Two experienced technology professionals based in Lisse, combining practical business advice with the technical depth to build solutions that last.',
-        person1Role: 'Business & solution consultant',
-        person1Text: 'Ioana turns complicated business needs into practical solutions people can actually use. Her experience spans business analysis, process improvement, solution architecture, websites, AI-assisted development and hands-on delivery. She has led international projects in sales, finance, retail and regulated environments, but her focus here is simple: helping local small businesses work better without unnecessary complexity.',
+        person1Role: 'Business & technical consultant',
+        person1Text: 'I turn complicated business needs into practical solutions people can actually use. My experience spans business analysis, process improvement, solution architecture, websites, AI and hands-on delivery. I have worked with the European Medicines Agency, Nissan and Sonova, working in sales, finance and regulated sectors. Today, I help small businesses work better through technology, without unnecessary complexity.',
         person1Chip1: 'Websites',
         person1Chip2: 'Business processes',
         person1Chip3: 'AI & automation',
         person1Chip4: 'Digital solutions',
         person2Role: 'Technical architect & developer',
-        person2Text: 'Thomas is a senior technical architect, consultant and developer with more than 20 years of experience. He has designed and delivered business-critical digital solutions for organisations including Eneco, APG, De Nederlandsche Bank and the European Medicines Agency. He brings deep expertise in software development, cloud technology, automation, connected systems and complex integrations.',
+        person2Text: 'I am a senior technical architect, consultant and developer with more than 20 years of experience. I have designed and delivered business-critical digital solutions for organisations including Eneco, APG, De Nederlandsche Bank and the European Medicines Agency. I bring deep expertise in software development, cloud technology, automation, connected systems and complex integrations.',
         person2Chip1: 'Technical architecture',
         person2Chip2: 'Software development',
         person2Chip3: 'Automation',
@@ -284,7 +283,7 @@
       nl: {
         navServices: 'Diensten',
         navAbout: 'Over ons',
-        navCta: 'Gratis intake',
+        navCta: 'Boek gratis intake',
         eyebrowHero: 'Lokale IT-hulp · Bollenstreek',
         heroTitle: 'Minder administratie.<br><em>Meer bedrijf.</em>',
         heroLead: 'We helpen kleine bedrijven om losse tools en repetitieve werkzaamheden om te zetten in heldere websites, beter verbonden systemen, slimme AI en praktische automatisering.',
@@ -346,14 +345,14 @@
         aboutEyebrow: 'Wie we zijn',
         aboutTitle: 'Zakelijke inzichten en diepe technische ervaring.',
         aboutIntro: 'Twee ervaren technologen gevestigd in Lisse, die praktische zakelijke begeleiding combineren met technische diepgang om oplossingen te bouwen die echt meegaan.',
-        person1Role: 'Business & solution consultant',
-        person1Text: 'Ioana vertaalt complexe bedrijfsbehoeften naar praktische oplossingen die mensen daadwerkelijk kunnen gebruiken. Ze heeft ervaring in business analyse, procesverbetering, solution architecture, websites, AI-ondersteunde ontwikkeling en hands-on levering. Ze heeft internationale projecten geleid in sales, finance, retail en gereguleerde omgevingen, maar haar focus hier is eenvoudig: kleine lokale bedrijven helpen beter te werken zonder onnodige complexiteit.',
+        person1Role: 'Business & technical consultant',
+        person1Text: 'Ik vertaal complexe bedrijfsbehoeften naar praktische oplossingen die mensen echt kunnen gebruiken. Mijn ervaring ligt in business analyse, procesverbetering, solution architecture, websites, AI en hands-on levering. Ik heb gewerkt voor het Europees Geneesmiddelenbureau, Nissan en Sonova, in sales, finance en gereguleerde sectoren. Vandaag help ik kleine bedrijven beter te werken met technologie, zonder onnodige complexiteit.',
         person1Chip1: 'Websites',
         person1Chip2: 'Bedrijfsprocessen',
         person1Chip3: 'AI & automatisering',
         person1Chip4: 'Digitale oplossingen',
         person2Role: 'Technisch architect & developer',
-        person2Text: 'Thomas is senior technisch architect, consultant en ontwikkelaar met meer dan 20 jaar ervaring. Hij heeft business-kritische digitale oplossingen ontworpen en geleverd voor organisaties zoals Eneco, APG, De Nederlandsche Bank en het European Medicines Agency. Hij brengt diepe expertise mee op het gebied van softwareontwikkeling, cloudtechnologie, automatisering, gekoppelde systemen en complexe integraties.',
+        person2Text: 'Ik ben senior technisch architect, consultant en ontwikkelaar met meer dan 20 jaar ervaring. Ik heb bedrijfskritische digitale oplossingen ontworpen en geleverd voor organisaties zoals Eneco, APG, De Nederlandsche Bank en het European Medicines Agency. Ik breng diepe expertise mee op het gebied van softwareontwikkeling, cloudtechnologie, automatisering, gekoppelde systemen en complexe integraties.',
         person2Chip1: 'Technische architectuur',
         person2Chip2: 'Softwareontwikkeling',
         person2Chip3: 'Automatisering',
