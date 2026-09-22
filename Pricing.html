@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clear prices for Prehn Consulting websites, digital solutions, AI and automation for small businesses in the Bollenstreek.">
+  <title>Prices | Prehn Consulting</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23133233'/%3E%3Cpath d='M18 47V17h15c9 0 15 5 15 13S42 43 33 43h-7v4zm8-12h7c4 0 7-2 7-5s-3-5-7-5h-7z' fill='%23f4b860'/%3E%3C/svg%3E">
+  <style>
+    :root { --ink:#172e54; --paper:#f3f8fd; --white:#fff; --gold:#f2bf5a; --aqua:#dcecf9; --teal:#6590c3; --coral:#ef826d; --lilac:#dcdaf5; --muted:#526987; --line:rgba(23,46,84,.15); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6; }
+    a { color:inherit; }
+    .wrap { width:min(1160px,calc(100% - 40px)); margin:auto; }
+    header { position:sticky; top:0; z-index:10; background:rgba(248,247,241,.92); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+    nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:800; letter-spacing:-.02em; }
+    .mark { width:40px; height:40px; display:grid; place-items:center; border-radius:11px; color:var(--gold); background:var(--ink); font:800 21px Georgia,serif; }
+    .navlinks { display:flex; align-items:center; gap:28px; }
+    .navlinks a { text-decoration:none; font-size:.94rem; font-weight:650; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:50px; padding:0 22px; border:1px solid var(--ink); border-radius:999px; color:#fff; background:var(--ink); text-decoration:none; font-weight:750; transition:.2s ease; }
+    .button:hover { transform:translateY(-2px); box-shadow:0 10px 26px rgba(23,46,84,.18); }
+    .button.light { color:var(--ink); background:transparent; }
+    .lang-switch { appearance:none; -webkit-appearance:none; background:transparent; border:1px solid var(--line); border-radius:999px; color:var(--ink); padding:10px 14px; font:700 .82rem/1.2 sans-serif; cursor:pointer; }
+    .hero { position:relative; overflow:hidden; padding:86px 0 64px; background:linear-gradient(90deg,rgba(243,248,253,.98) 0%,rgba(243,248,253,.92) 48%,rgba(243,248,253,.18) 100%),url("cocoa-with-lights.jpg") center 14%/cover no-repeat; }
+    .hero::after { content:""; position:absolute; right:8%; bottom:-52px; width:140px; height:140px; border-radius:38% 62% 62% 38%; background:rgba(239,130,109,.18); transform:rotate(28deg); }
+    .eyebrow { display:inline-flex; gap:9px; align-items:center; font-size:.82rem; font-weight:800; text-transform:uppercase; letter-spacing:.11em; }
+    .eyebrow::before { content:""; width:28px; height:3px; background:var(--gold); }
+    h1 { max-width:800px; margin:20px 0 24px; font:700 clamp(3rem,6vw,5.5rem)/.98 Georgia,serif; letter-spacing:-.055em; }
+    h1 em { color:var(--teal); font-style:normal; }
+    .lead { max-width:720px; margin:0; color:var(--muted); font-size:clamp(1.08rem,2vw,1.28rem); }
+    .trust { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:28px; color:var(--muted); font-size:.91rem; }
+    .trust span::before { content:"✓"; margin-right:8px; color:var(--teal); font-weight:900; }
+    .pricing { padding:28px 0 90px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:stretch; }
+    .intro-offer { position:relative; display:flex; flex-direction:column; min-width:0; padding:32px; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:25px; box-shadow:0 18px 48px rgba(23,46,84,.08); }
+    .intro-offer::before { content:""; position:absolute; inset:0 0 auto; height:7px; background:var(--coral); }
+    .intro-offer * { box-sizing:border-box; }
+    .intro-offer > div:first-child { display:contents; }
+    .offer-label { order:1; align-self:flex-start; margin:0 0 22px; padding:6px 10px; border-radius:999px; color:var(--ink); background:var(--aqua); font-size:.75rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+    .intro-offer h2 { order:2; margin:0; font:700 1.7rem/1.08 Georgia,serif; letter-spacing:-.035em; }
+    .offer-accent { display:none; }
+    .offer-description { order:6; min-height:76px; margin:0 0 19px; color:var(--muted); font-size:16px; }
+    .offer-benefits { order:7; display:block; margin:0 0 10px; padding:0; list-style:none; color:#486d98; font-size:15px; }
+    .offer-benefits li { margin:8px 0; }
+    .offer-benefits li::before { content:"✓ "; font-weight:800; }
+    .offer-details { display:contents; }
+    .offer-price { order:3; margin:8px 0 0; font:700 3rem/1 Georgia,serif; letter-spacing:-.05em; }
+    .offer-vat { order:4; margin:0 0 16px; color:var(--muted); font-size:.88rem; }
+    .offer-regular { order:5; margin:0 0 19px; color:var(--muted); font-size:15px; }
+    .offer-availability { order:8; align-self:flex-start; display:inline-block; margin:0 0 16px; padding:8px 12px; border-radius:999px; background:#ffe4df; color:#923a30; font-size:14px; font-weight:750; }
+    .offer-slots { order:9; display:flex; gap:14px; margin:0 0 20px; }
+    .slot-dots { display:flex; gap:12px; margin-bottom:6px; }
+    .slot-dot { display:block; width:23px; height:23px; border:2px solid var(--coral); border-radius:50%; }
+    .slot-dot.booked { border-color:var(--ink); background:var(--ink); }
+    .slot-caption { color:#486d98; font-size:14px; }
+    .offer-button { order:10; display:block; padding:14px 16px; border-radius:999px; color:#fff; background:var(--ink); text-align:center; text-decoration:none; font-size:15px; font-weight:750; }
+    .offer-button:hover { background:#294c7d; }
+    .offer-reassurance { order:11; margin:10px 0 0; color:#486d98; font-size:14px; text-align:center; }
+    .card { position:relative; display:flex; flex-direction:column; overflow:hidden; padding:32px; border:1px solid var(--line); border-radius:25px; background:var(--white); box-shadow:0 18px 48px rgba(23,46,84,.08); }
+    .card::before { content:""; position:absolute; inset:0 0 auto; height:7px; background:var(--teal); }
+    .card:first-child::before { background:var(--coral); }
+    .card:last-child::before { background:var(--gold); }
+    .card.featured { color:#fff; background:var(--ink); border-color:var(--ink); transform:translateY(-10px); }
+    .tag { align-self:flex-start; padding:6px 10px; border-radius:999px; color:var(--ink); background:var(--aqua); font-size:.75rem; font-weight:800; text-transform:uppercase; letter-spacing:.06em; }
+    .card.featured .tag { background:var(--gold); }
+    .card h2 { margin:22px 0 6px; font:700 1.7rem Georgia,serif; }
+    .price { margin:8px 0 16px; font:700 3rem/1 Georgia,serif; letter-spacing:-.04em; }
+    .price small { font:600 .88rem/1.4 Inter,ui-sans-serif,system-ui,sans-serif; letter-spacing:0; color:var(--muted); }
+    .featured .price small,.featured .intro { color:#cbd8d5; }
+    .intro { min-height:76px; margin:0 0 19px; color:var(--muted); }
+    .card ul { flex:1; margin:0 0 28px; padding:0; list-style:none; }
+    .card li { position:relative; padding:11px 0 11px 28px; border-top:1px solid var(--line); }
+    .card li::before { content:"✓"; position:absolute; left:0; color:var(--teal); font-weight:900; }
+    .featured li { border-color:rgba(255,255,255,.14); }
+    .featured li::before { color:var(--gold); }
+    .featured .button { color:var(--ink); background:var(--gold); border-color:var(--gold); }
+    .details { position:relative; overflow:hidden; padding:88px 0; color:#fff; background:var(--ink); }
+    .details::after { content:""; position:absolute; right:-110px; top:-130px; width:360px; height:360px; border:64px solid rgba(101,144,195,.25); border-radius:50%; }
+    .details-grid { position:relative; z-index:1; }
+    .details-grid { display:grid; grid-template-columns:.82fr 1.18fr; gap:70px; align-items:start; }
+    .details h2 { margin:13px 0 18px; font:700 clamp(2.3rem,4vw,3.7rem)/1.05 Georgia,serif; letter-spacing:-.035em; }
+    .details p { color:#cbd8d5; }
+    .rows { border-top:1px solid rgba(255,255,255,.17); }
+    .row { display:grid; grid-template-columns:1fr auto; gap:24px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,.17); }
+    .row strong { font-size:1.06rem; }
+    .row span { color:var(--gold); font-weight:800; white-space:nowrap; }
+    .note { margin-top:20px; color:#aebfbc !important; font-size:.9rem; }
+    .details-disclaimer { grid-column:1 / -1; margin:0; color:#aebfbc !important; font-size:.9rem; }
+    .included { padding:88px 0; }
+    .included-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+    .panel { padding:34px; border:1px solid var(--line); border-radius:24px; background:#fff; }
+    .panel h2 { margin:0 0 14px; font:700 2rem Georgia,serif; }
+    .panel p { color:var(--muted); }
+    .panel ul { margin:22px 0 0; padding-left:20px; }
+    .panel li { margin:10px 0; }
+    .panel.accent { background:linear-gradient(145deg,var(--aqua),#eef7ff); border-color:rgba(101,144,195,.35); }
+    .panel:last-child { border-top:7px solid var(--coral); }
+    .cta { padding:0 0 88px; }
+    .cta-box { display:grid; grid-template-columns:1fr auto; gap:34px; align-items:center; padding:54px; color:#fff; background:linear-gradient(115deg,#5f89bc,#3f6faa); border-radius:30px; box-shadow:0 20px 50px rgba(23,46,84,.16); }
+    .cta h2 { margin:0 0 10px; font:700 clamp(2rem,4vw,3.3rem)/1.06 Georgia,serif; }
+    .cta p { margin:0; color:#e2eeeb; }
+    .cta .button { color:var(--ink); background:var(--gold); border-color:var(--gold); white-space:nowrap; }
+    footer { padding:34px 0; border-top:1px solid var(--line); }
+    .footer-row { display:flex; justify-content:space-between; align-items:center; gap:24px; color:var(--muted); font-size:.9rem; }
+    .footer-row a { text-decoration:none; }
+    @media (max-width:900px) {
+      .cards { grid-template-columns:1fr; max-width:680px; margin:auto; }
+      .card.featured { transform:none; }
+      .intro { min-height:0; }
+      .details-grid,.included-grid,.cta-box { grid-template-columns:1fr; }
+      .details-grid { gap:35px; }
+      .cta .button { justify-self:start; }
+    }
+    @media (max-width:620px) {
+      .wrap { width:min(100% - 28px,1160px); }
+      .navlinks a:not(.button) { display:none; }
+      .brand span:last-child { display:none; }
+      .hero { padding-top:58px; background-position:center 10%; }
+      h1 { font-size:3.05rem; }
+      .card,.panel { padding:25px; }
+      .offer-details { padding:28px 0 0; border-top:1px solid #dce8f4; border-left:0; }
+      .row { grid-template-columns:1fr; gap:4px; }
+      .cta-box { padding:36px 27px; }
+      .footer-row { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="mark">P</span><span>Prehn Consulting</span></a>
+      <div class="navlinks">
+        <a href="index.html#services" data-i18n="navServices">Services</a>
+        <a href="index.html#about" data-i18n="navAbout">About us</a>
+        <a href="Pricing.html" data-i18n="navPricing">Pricing</a>
+        <a class="button" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener" data-i18n="navCta">Book a free assessment</a>
+        <label class="sr-only" for="lang-switch" style="position:absolute;left:-9999px;">Language</label>
+        <select id="lang-switch" class="lang-switch" aria-label="Select language">
+          <option value="en" selected>EN</option>
+          <option value="nl">NL</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow" data-i18n="pricingEyebrow">Clear, practical pricing</span>
+        <h1 data-i18n="pricingTitle">Start small.<br><em>Know the cost.</em></h1>
+        <p class="lead" data-i18n="pricingIntro">Every business is different, but the price should never be a mystery. These packages cover the needs we see most often. After your free assessment, you receive a clear proposal and fixed price before any work begins.</p>
+        <div class="trust"><span data-i18n="trustVat">Prices exclude VAT</span><span data-i18n="trustCosts">No hidden costs</span><span data-i18n="trustRevisions">Two revision rounds included</span></div>
+      </div>
+    </section>
+
+    <section class="pricing" aria-label="Website packages">
+      <div class="wrap cards">
+        <section class="intro-offer" aria-labelledby="intro-offer-title">
+          <div>
+            <p class="offer-label" data-i18n="offerLabel">Introductory offer</p>
+            <h2 id="intro-offer-title" data-i18n="offerTitle">Your business website.<br>A smaller first step.</h2>
+            <div class="offer-accent" aria-hidden="true"></div>
+            <p class="offer-description" data-i18n="offerDescription">The first 5 clients can get a professional one-page website for <strong>€950 excl. VAT.</strong></p>
+            <ul class="offer-benefits">
+              <li data-i18n="offerBenefit1">Mobile-friendly design</li>
+              <li data-i18n="offerBenefit2">Up to 6 sections</li>
+              <li data-i18n="offerBenefit3">Two revision rounds</li>
+            </ul>
+          </div>
+          <div class="offer-details">
+            <p class="offer-price">€950</p>
+            <p class="offer-vat" data-i18n="offerVat">excl. VAT</p>
+            <p class="offer-regular" data-i18n="offerRegular">Regular price <s>€1,250</s></p>
+            <p class="offer-availability" data-i18n="offerAvailability">3 places remaining</p>
+            <div class="offer-slots">
+              <div>
+                <div class="slot-dots" aria-hidden="true"><span class="slot-dot booked"></span><span class="slot-dot booked"></span></div>
+                <span class="slot-caption" data-i18n="offerBooked">2 booked</span>
+              </div>
+              <div>
+                <div class="slot-dots" aria-hidden="true"><span class="slot-dot"></span><span class="slot-dot"></span><span class="slot-dot"></span></div>
+                <span class="slot-caption" data-i18n="offerAvailable">3 available</span>
+              </div>
+            </div>
+            <a class="offer-button" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener noreferrer" data-i18n="offerButton">Book a free assessment →</a>
+          </div>
+        </section>
+
+        <article class="card featured">
+          <span class="tag" data-i18n="businessTag">Most popular</span>
+          <h2 data-i18n="businessTitle">Business website</h2>
+          <div class="price" data-i18n="businessPrice">From €1,950 <small>excl. VAT</small></div>
+          <p class="intro" data-i18n="businessIntro">A complete website that gives each important service room to be understood.</p>
+          <ul>
+            <li data-i18n="businessItem1">Four to six tailored pages</li>
+            <li data-i18n="businessItem2">Clear navigation and page structure</li>
+            <li data-i18n="businessItem3">Mobile-friendly design</li>
+            <li data-i18n="businessItem4">Forms, booking or Calendly</li>
+            <li data-i18n="businessItem5">Basic SEO and analytics</li>
+            <li data-i18n="businessItem6">Domain connection and launch</li>
+          </ul>
+          <a class="button" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener" data-i18n="businessButton">Book a free assessment →</a>
+        </article>
+
+        <article class="card">
+          <span class="tag" data-i18n="automationTag">Connected business</span>
+          <h2 data-i18n="automationTitle">Website + automation</h2>
+          <div class="price" data-i18n="automationPrice">From €2,750 <small>excl. VAT</small></div>
+          <p class="intro" data-i18n="automationIntro">A website connected to the tools and processes that keep your business moving.</p>
+          <ul>
+            <li data-i18n="automationItem1">Everything in the business package</li>
+            <li data-i18n="automationItem2">CRM or customer follow-up setup</li>
+            <li data-i18n="automationItem3">Booking or enquiry automation</li>
+            <li data-i18n="automationItem4">Sales or invoicing connection</li>
+            <li data-i18n="automationItem5">AI-assisted workflow where useful</li>
+            <li data-i18n="automationItem6">Training and handover</li>
+          </ul>
+          <a class="button light" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener" data-i18n="automationButton">Explore the possibilities →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="wrap details-grid">
+        <div>
+          <span class="eyebrow" data-i18n="otherEyebrow">Other services</span>
+          <h2 data-i18n="otherTitle">Support beyond the website.</h2>
+          <p data-i18n="otherIntro">Sometimes you do not need a new website. You need one part of your daily work to become simpler, faster or more reliable.</p>
+          <p class="note" data-i18n="otherNote">The final price depends on the tools involved and the complexity of your process. You always approve the price before we begin.</p>
+        </div>
+        <div class="rows">
+          <div class="row"><strong data-i18n="serviceRow1">Business and process assessment</strong><span data-i18n="servicePrice1">First hour free</span></div>
+          <div class="row"><strong data-i18n="serviceRow2">Customer management or CRM setup</strong><span data-i18n="servicePrice2">From €850</span></div>
+          <div class="row"><strong data-i18n="serviceRow3">Sales or invoicing process improvement</strong><span data-i18n="servicePrice3">From €850</span></div>
+          <div class="row"><strong data-i18n="serviceRow4">AI and automation setup</strong><span data-i18n="servicePrice4">From €650</span></div>
+          <div class="row"><strong data-i18n="serviceRow5">Additional consulting or development</strong><span data-i18n="servicePrice5">€85/hour</span></div>
+          <div class="row"><strong data-i18n="serviceRow6">Website care and small updates</strong><span data-i18n="servicePrice6">From €69/month</span></div>
+        </div>
+        <p class="details-disclaimer" data-i18n="disclaimer">Prices do not include individual licences for off-the-shelf products.</p>
+      </div>
+    </section>
+
+    <section class="included">
+      <div class="wrap included-grid">
+        <article class="panel accent">
+          <h2 data-i18n="includedTitle">Included in every website</h2>
+          <p data-i18n="includedIntro">We take care of the essentials needed to get your website live and working properly.</p>
+          <ul>
+            <li data-i18n="includedItem1">Free one-hour assessment</li>
+            <li data-i18n="includedItem2">A clear proposal and agreed scope</li>
+            <li data-i18n="includedItem3">Responsive design for desktop and mobile</li>
+            <li data-i18n="includedItem4">Two revision rounds</li>
+            <li data-i18n="includedItem5">Launch support and simple handover</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="separateTitle">Quoted separately when needed</h2>
+          <p data-i18n="separateIntro">This keeps your base price fair when you do not need these extras.</p>
+          <ul>
+            <li data-i18n="separateItem1">Logo creation and full brand identity</li>
+            <li data-i18n="separateItem2">Professional photography or paid images</li>
+            <li data-i18n="separateItem3">Extensive copywriting or translations</li>
+            <li data-i18n="separateItem4">Webshops and online payment systems</li>
+            <li data-i18n="separateItem5">Paid software licences, domain and email fees</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-box">
+        <div><h2 data-i18n="ctaTitle">Not sure which option fits?</h2><p data-i18n="ctaText">Let’s look at your business together over coffee. The first hour is free, practical and without obligation.</p></div>
+        <a class="button" href="https://calendly.com/ioana-vitu/coffee-and-discovery" target="_blank" rel="noopener" data-i18n="ctaButton">Choose a time →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><div>© <span id="year"></span> <span data-i18n="footerCompany">Prehn Consulting · Lisse, Netherlands</span></div><div><a href="mailto:ioana.vitu@hotmail.co.uk">ioana.vitu@hotmail.co.uk</a> · <a href="tel:+31651885824">06 5188 5824</a></div></div></footer>
+  <script>
+    const translations = {
+      en: {
+        navServices: 'Services', navAbout: 'About us', navPricing: 'Pricing', navCta: 'Book a free assessment',
+        pricingEyebrow: 'Clear, practical pricing', pricingTitle: 'Start small.<br><em>Know the cost.</em>',
+        pricingIntro: 'Every business is different, but the price should never be a mystery. These packages cover the needs we see most often. After your free assessment, you receive a clear proposal and fixed price before any work begins.',
+        trustVat: 'Prices exclude VAT', trustCosts: 'No hidden costs', trustRevisions: 'Two revision rounds included',
+        offerLabel: 'Introductory offer', offerTitle: 'Your business website.<br>A smaller first step.', offerDescription: 'The first 5 clients can get a professional one-page website for <strong>€950 excl. VAT.</strong>', offerVat: 'excl. VAT', offerRegular: 'Regular price <s>€1,250</s>', offerAvailability: '3 places remaining', offerBooked: '2 booked', offerAvailable: '3 available', offerButton: 'Book a free assessment →', offerBenefit1: 'Mobile-friendly design', offerBenefit2: 'Up to 6 sections', offerBenefit3: 'Two revision rounds',
+        businessTag: 'Most popular', businessTitle: 'Business website', businessPrice: 'From €1,950 <small>excl. VAT</small>', businessIntro: 'A complete website that gives each important service room to be understood.', businessItem1: 'Four to six tailored pages', businessItem2: 'Clear navigation and page structure', businessItem3: 'Mobile-friendly design', businessItem4: 'Forms, booking or Calendly', businessItem5: 'Basic SEO and analytics', businessItem6: 'Domain connection and launch', businessButton: 'Book a free assessment →',
+        automationTag: 'Connected business', automationTitle: 'Website + automation', automationPrice: 'From €2,750 <small>excl. VAT</small>', automationIntro: 'A website connected to the tools and processes that keep your business moving.', automationItem1: 'Everything in the business package', automationItem2: 'CRM or customer follow-up setup', automationItem3: 'Booking or enquiry automation', automationItem4: 'Sales or invoicing connection', automationItem5: 'AI-assisted workflow where useful', automationItem6: 'Training and handover', automationButton: 'Explore the possibilities →',
+        otherEyebrow: 'Other services', otherTitle: 'Support beyond the website.', otherIntro: 'Sometimes you do not need a new website. You need one part of your daily work to become simpler, faster or more reliable.', otherNote: 'The final price depends on the tools involved and the complexity of your process. You always approve the price before we begin.',
+        serviceRow1: 'Business and process assessment', servicePrice1: 'First hour free', serviceRow2: 'Customer management or CRM setup', servicePrice2: 'From €850', serviceRow3: 'Sales or invoicing process improvement', servicePrice3: 'From €850', serviceRow4: 'AI and automation setup', servicePrice4: 'From €650', serviceRow5: 'Additional consulting or development', servicePrice5: '€85/hour', serviceRow6: 'Website care and small updates', servicePrice6: 'From €69/month', disclaimer: 'Prices do not include individual licences for off-the-shelf products.',
+        includedTitle: 'Included in every website', includedIntro: 'We take care of the essentials needed to get your website live and working properly.', includedItem1: 'Free one-hour assessment', includedItem2: 'A clear proposal and agreed scope', includedItem3: 'Responsive design for desktop and mobile', includedItem4: 'Two revision rounds', includedItem5: 'Launch support and simple handover', separateTitle: 'Quoted separately when needed', separateIntro: 'This keeps your base price fair when you do not need these extras.', separateItem1: 'Logo creation and full brand identity', separateItem2: 'Professional photography or paid images', separateItem3: 'Extensive copywriting or translations', separateItem4: 'Webshops and online payment systems', separateItem5: 'Paid software licences, domain and email fees',
+        ctaTitle: 'Not sure which option fits?', ctaText: 'Let’s look at your business together over coffee. The first hour is free, practical and without obligation.', ctaButton: 'Choose a time →', footerCompany: 'Prehn Consulting · Lisse, Netherlands'
+      },
+      nl: {
+        navServices: 'Diensten', navAbout: 'Over ons', navPricing: 'Prijzen', navCta: 'Boek een gratis intake',
+        pricingEyebrow: 'Duidelijke, praktische prijzen', pricingTitle: 'Begin klein.<br><em>Ken de kosten.</em>',
+        pricingIntro: 'Elk bedrijf is anders, maar de prijs mag nooit een verrassing zijn. Deze pakketten dekken de behoeften die we het vaakst zien. Na uw gratis intake ontvangt u een duidelijk voorstel en een vaste prijs voordat we beginnen.',
+        trustVat: 'Prijzen zijn exclusief btw', trustCosts: 'Geen verborgen kosten', trustRevisions: 'Twee correctierondes inbegrepen',
+        offerLabel: 'Introductieaanbod', offerTitle: 'Uw bedrijfswebsite.<br>Een kleinere eerste stap.', offerDescription: 'De eerste 5 klanten kunnen een professionele website van één pagina krijgen voor <strong>€950 excl. btw.</strong>', offerVat: 'excl. btw', offerRegular: 'Normale prijs <s>€1.250</s>', offerAvailability: 'Nog 3 plaatsen beschikbaar', offerBooked: '2 geboekt', offerAvailable: '3 beschikbaar', offerButton: 'Boek een gratis intake →', offerBenefit1: 'Mobielvriendelijk ontwerp', offerBenefit2: 'Maximaal 6 secties', offerBenefit3: 'Twee correctierondes',
+        businessTag: 'Meest gekozen', businessTitle: 'Bedrijfswebsite', businessPrice: 'Vanaf €1.950 <small>excl. btw</small>', businessIntro: 'Een complete website waarin elke belangrijke dienst helder wordt uitgelegd.', businessItem1: 'Vier tot zes pagina’s op maat', businessItem2: 'Duidelijke navigatie en paginastructuur', businessItem3: 'Mobielvriendelijk ontwerp', businessItem4: 'Formulieren, afspraken of Calendly', businessItem5: 'Basis SEO en analytics', businessItem6: 'Domeinkoppeling en livegang', businessButton: 'Boek een gratis intake →',
+        automationTag: 'Verbonden bedrijf', automationTitle: 'Website + automatisering', automationPrice: 'Vanaf €2.750 <small>excl. btw</small>', automationIntro: 'Een website die verbonden is met de tools en processen die uw bedrijf in beweging houden.', automationItem1: 'Alles uit het bedrijfspakket', automationItem2: 'CRM- of klantopvolging instellen', automationItem3: 'Automatisering van afspraken of aanvragen', automationItem4: 'Koppeling met verkoop of facturatie', automationItem5: 'AI-ondersteunde workflow waar nuttig', automationItem6: 'Training en overdracht', automationButton: 'Ontdek de mogelijkheden →',
+        otherEyebrow: 'Andere diensten', otherTitle: 'Ondersteuning naast uw website.', otherIntro: 'Soms heeft u geen nieuwe website nodig. U wilt één onderdeel van uw dagelijks werk eenvoudiger, sneller of betrouwbaarder maken.', otherNote: 'De uiteindelijke prijs hangt af van de betrokken tools en de complexiteit van uw proces. U keurt de prijs altijd goed voordat we beginnen.',
+        serviceRow1: 'Bedrijfs- en procesanalyse', servicePrice1: 'Eerste uur gratis', serviceRow2: 'Klantbeheer of CRM instellen', servicePrice2: 'Vanaf €850', serviceRow3: 'Verbetering van verkoop- of facturatieproces', servicePrice3: 'Vanaf €850', serviceRow4: 'AI en automatisering instellen', servicePrice4: 'Vanaf €650', serviceRow5: 'Aanvullend advies of ontwikkeling', servicePrice5: '€85/uur', serviceRow6: 'Websitebeheer en kleine updates', servicePrice6: 'Vanaf €69/maand', disclaimer: 'Prijzen zijn exclusief individuele licenties voor kant-en-klare producten.',
+        includedTitle: 'Inbegrepen bij elke website', includedIntro: 'Wij regelen de belangrijkste zaken om uw website live te zetten en goed te laten werken.', includedItem1: 'Gratis intake van één uur', includedItem2: 'Een duidelijk voorstel en afgesproken scope', includedItem3: 'Responsive ontwerp voor desktop en mobiel', includedItem4: 'Twee correctierondes', includedItem5: 'Ondersteuning bij livegang en eenvoudige overdracht', separateTitle: 'Apart geoffreerd wanneer nodig', separateIntro: 'Zo blijft uw basisprijs eerlijk wanneer u deze extra’s niet nodig heeft.', separateItem1: 'Logo en volledige huisstijl', separateItem2: 'Professionele fotografie of betaalde afbeeldingen', separateItem3: 'Uitgebreide tekstschrijven of vertalingen', separateItem4: 'Webshops en online betaalsystemen', separateItem5: 'Betaalde softwarelicenties, domein- en e-mailkosten',
+        ctaTitle: 'Weet u niet welke optie past?', ctaText: 'Laten we samen met een kop koffie naar uw bedrijf kijken. Het eerste uur is gratis, praktisch en vrijblijvend.', ctaButton: 'Kies een tijd →', footerCompany: 'Prehn Consulting · Lisse, Nederland'
+      }
+    };
+
+    const langSelect = document.getElementById('lang-switch');
+    const applyTranslations = (lang) => {
+      const dictionary = translations[lang] || translations.en;
+      document.documentElement.lang = lang === 'nl' ? 'nl-NL' : 'en';
+      document.title = lang === 'nl' ? 'Prijzen | Prehn Consulting' : 'Prices | Prehn Consulting';
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.getAttribute('data-i18n');
+        if (dictionary[key]) element.innerHTML = dictionary[key];
+      });
+      localStorage.setItem('preferredLanguage', lang);
+    };
+
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    langSelect.value = savedLang;
+    applyTranslations(savedLang);
+    langSelect.addEventListener('change', (event) => applyTranslations(event.target.value));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
