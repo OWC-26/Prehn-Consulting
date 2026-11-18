@@ -1,0 +1,12 @@
+{
+  "name": "prehnconsulting-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website of Thomas Prehn Consulting B.V. - static, bilingual (NL default, EN under /en/), no dependencies.",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "dev": "node src/build.mjs && node src/serve.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,211 @@
+/* =====================================================================
+   Prehn Consulting - "Corporate" theme
+   Loaded after styles.css and overrides it. Remove the <link> to theme.css
+   in src/build.mjs to go back to the plain look.
+   Inspired by: Kyndryl (floating glass nav, pill buttons, light large type,
+   accent bars), Consultancy.eu (dark hero, offset frame behind the form),
+   Accenture (near-black sections, tight bold headlines, square cards).
+   Palette: blue and yellow. Yellow fills always carry dark text.
+   Selectors are mapped to this site's markup (src/build.mjs).
+   ===================================================================== */
+
+:root {
+  --night: #070b14;          /* near-black navy for hero, dark bands, footer */
+  --night-2: #0f1a30;        /* raised surfaces on dark */
+  --ink: #0e1726;
+  --ink-soft: #4b5565;       /* 7.4:1 on white */
+  --green: #1d3f8f;          /* primary blue (variable name kept for compatibility) */
+  --green-2: #2f5fcf;        /* bright blue, 5.3:1 on white */
+  --tulip: #2f5fcf;          /* accent for text and icons */
+  --yellow: #f7c600;
+  --yellow-hover: #ffd633;
+  --tulip-soft: #eaf0fc;
+  --cream: #ffffff;
+  --tint: #f4f6fa;
+  --line: #e2e7ef;
+  --on-dark: #ffffff;
+  --on-dark-soft: #c3cbd9;   /* 10:1 on --night */
+  --radius: 2px;
+  --radius-lg: 2px;
+  --shadow: none;
+  --sans: "Inter", "Nunito Sans", "Segoe UI", Roboto, system-ui, -apple-system, Arial, sans-serif;
+  --serif: var(--sans);      /* headings use the sans in this theme */
+  --header-h: 64px;
+
+  /* map the base stylesheet's tokens onto the theme */
+  --paper: var(--cream);
+  --soft: var(--tint);
+  --muted: var(--ink-soft);
+  --on-dark-muted: var(--on-dark-soft);
+}
+
+html { scroll-padding-top: calc(var(--header-h) + 32px); }
+body { font-family: var(--sans); font-weight: 400; background: var(--cream); color: var(--ink); }
+
+/* ---------- Type: tight, confident headlines (Accenture), light large leads (Kyndryl) ---------- */
+h1, h2, h3 { font-family: var(--sans); color: var(--ink); letter-spacing: -0.02em; }
+h1 { font-size: clamp(2.8rem, 6.5vw, 5.25rem); font-weight: 650; line-height: 1.02; letter-spacing: -0.035em; }
+.page-hero h1 { font-size: clamp(2.5rem, 5.5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; line-height: 1.1; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+h1 em, h2 em { font-style: normal; color: var(--green-2); }
+.lead { font-size: clamp(1.15rem, 1.6vw, 1.4rem); font-weight: 300; line-height: 1.5; color: var(--ink-soft); }
+a { color: var(--green-2); }
+a:hover { color: var(--green); }
+
+/* Eyebrow with a short accent bar above it (Kyndryl / Accenture) */
+.eyebrow { display: block; color: var(--ink); font-size: .78rem; letter-spacing: .14em; }
+.eyebrow::before { content: ""; display: block; width: 40px; height: 3px; background: var(--green-2); margin-bottom: 1rem; }
+
+/* ---------- Floating glass header (Kyndryl) ---------- */
+.site-header {
+  position: fixed; top: 12px; left: 12px; right: 12px;
+  max-width: 1240px; margin: 0 auto;
+  background: rgb(7 11 20 / .78); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / .12); border-radius: 16px;
+  color: var(--on-dark);
+}
+.header-row { min-height: var(--header-h); }
+.brand img { width: 128px; filter: brightness(0) invert(1); } /* white logo on the dark glass */
+.site-nav ul a { color: var(--on-dark); font-size: .95rem; font-weight: 500; }
+.site-nav ul a:hover { background: transparent; color: var(--yellow); }
+.site-nav ul a[aria-current="page"] { color: var(--yellow); text-decoration-color: var(--yellow); }
+.lang { color: var(--on-dark); border-color: rgb(255 255 255 / .3); }
+.lang:hover { background: transparent; color: var(--yellow); border-color: var(--yellow); }
+.menu-toggle { background: transparent; border-color: var(--on-dark); color: var(--on-dark); }
+@media (max-width: 960px) {
+  .site-nav { padding-bottom: 16px; }
+}
+/* Room for the fixed header on the first section of every page */
+.hero, .page-hero { padding-top: calc(var(--header-h) + clamp(4rem, 9vw, 7rem)); }
+
+/* ---------- Buttons: pills (Kyndryl) ---------- */
+.button { border-radius: 999px; font-weight: 600; background: var(--green); border-color: var(--green); color: #fff; }
+.button:hover { transform: none; box-shadow: none; background: var(--night); border-color: var(--night); color: #fff; }
+.button-yellow, .package.featured .button { background: var(--yellow); border-color: var(--yellow); color: var(--ink); }
+.button-yellow:hover, .package.featured .button:hover { background: var(--yellow-hover); border-color: var(--yellow-hover); color: var(--ink); }
+.button-ghost { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+.button-ghost:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* ---------- Dark surfaces: hero, page heroes, dark bands, CTA (Accenture / Consultancy.eu) ---------- */
+.hero, .page-hero, .section-dark, .cta-box {
+  background:
+    radial-gradient(60rem 30rem at 85% 10%, rgb(47 95 207 / .35), transparent 60%),
+    radial-gradient(40rem 25rem at 0% 100%, rgb(247 198 0 / .08), transparent 60%),
+    var(--night);
+  color: var(--on-dark);
+}
+/* Optional photo behind the hero (Consultancy.eu / Kyndryl style):
+   uncomment and add a dark, wide photo as /assets/img/hero.webp
+.hero { background: linear-gradient(90deg, rgb(7 11 20 / .92) 35%, rgb(7 11 20 / .55)), url("/assets/img/hero.webp") center / cover, var(--night); } */
+.hero h1, .hero h2, .page-hero h1, .section-dark h2, .section-dark h3, .cta-box h2 { color: var(--on-dark); }
+.hero h1 em, .page-hero h1 em, .cta-box h2 em { color: var(--yellow); }
+.hero .lead, .page-hero .lead, .section-dark p, .cta-box p, .page-hero .small { color: var(--on-dark-soft); }
+.hero .eyebrow, .page-hero .eyebrow, .section-dark .eyebrow { color: var(--on-dark-soft); }
+.hero .eyebrow::before, .page-hero .eyebrow::before, .section-dark .eyebrow::before { background: var(--yellow); }
+.hero .trust, .page-hero .trust { color: var(--on-dark-soft); }
+.hero .trust li::before, .page-hero .trust li::before { color: var(--yellow); }
+.site-header .button, .hero .button:not(.button-ghost), .page-hero .button:not(.button-ghost), .section-dark .button, .cta-box .button { background: var(--yellow); border-color: var(--yellow); color: var(--ink); }
+.site-header .button:hover, .hero .button:not(.button-ghost):hover, .page-hero .button:not(.button-ghost):hover, .section-dark .button:hover, .cta-box .button:hover { background: var(--yellow-hover); border-color: var(--yellow-hover); color: var(--ink); }
+.hero .button-ghost, .page-hero .button-ghost, .section-dark .button-ghost { border-color: rgb(255 255 255 / .6); color: #fff; }
+.hero .button-ghost:hover, .page-hero .button-ghost:hover, .section-dark .button-ghost:hover { background: #fff; border-color: #fff; color: var(--ink); }
+.hero a:not(.button), .page-hero a:not(.button), .cta-box a:not(.button) { color: #fff; }
+.page-hero { padding-bottom: clamp(3rem, 7vw, 5rem); margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+.page-hero + .section-tight { padding-top: 0; }
+.not-found { margin-bottom: 0; }
+
+/* Hero card: glass panel with a yellow offset frame (Consultancy.eu) */
+.hero-grid, .contact-grid { position: relative; z-index: 0; } /* stacking context so the offset frames sit behind the cards */
+.assess { position: relative; margin: 0 22px 22px 0; background: var(--night-2); border: 1px solid rgb(255 255 255 / .1); border-radius: var(--radius); box-shadow: none; color: var(--on-dark); }
+.assess::after { content: ""; position: absolute; inset: 22px -22px -22px 22px; border: 3px solid var(--yellow); z-index: -1; }
+.assess h2 { color: var(--on-dark); font-weight: 600; }
+.assess-label, .assess li span { color: var(--on-dark-soft); }
+.assess li { border-top-color: rgb(255 255 255 / .12); }
+.assess li::before { border-radius: var(--radius); }
+
+/* ---------- Sections ---------- */
+.section { padding: clamp(4rem, 9vw, 7rem) 0; }
+.section-tight { padding-top: 0; }
+.section-soft { background: var(--tint); }
+
+/* ---------- Cards: square, flat, bordered (Accenture) ---------- */
+.service-card, .package, .panel, .case, .quote-card, .person, .values li {
+  border-radius: var(--radius); box-shadow: none;
+  border: 1px solid var(--line); border-top: 3px solid var(--line);
+  transition: border-color .2s, transform .2s;
+}
+.service-card:hover, .panel:hover, .person:hover, .values li:hover { border-top-color: var(--yellow); }
+.service-card:hover, .case:hover { transform: translateY(-3px); }
+.section-dark .service-card { background: var(--night-2); border-color: rgb(255 255 255 / .1); border-top-color: rgb(255 255 255 / .1); }
+.section-dark .service-card:hover { border-top-color: var(--yellow); }
+.section-dark .service-card p { color: var(--on-dark-soft); }
+.section-dark .checks li { color: var(--on-dark); }
+.panel-soft { background: var(--tint); }
+.icon { border-radius: var(--radius); background: var(--tulip-soft); color: var(--green); }
+.section-dark .icon { background: var(--yellow); color: var(--ink); }
+.badge-example { border-radius: 0; background: var(--yellow); color: var(--ink); }
+.checks li::before { color: var(--green-2); }
+.section-dark .checks li::before { color: var(--yellow); }
+.note-box { border-radius: var(--radius); background: var(--tint); border-left: 3px solid var(--yellow); }
+.from strong { font: 600 1.5rem var(--sans); color: var(--ink); }
+.values li { border-top: 3px solid var(--yellow); }
+
+/* Numbers as large light figures with an accent rule (Kyndryl feature row) */
+.steps li { padding-top: 1.25rem; border-top: 2px solid var(--yellow); }
+.steps li::before { position: static; display: block; color: var(--green-2); font: 300 2.75rem/1 var(--sans); margin-bottom: .75rem; }
+.steps li:not(:last-child)::after { display: none; }
+
+/* ---------- Proof ---------- */
+.quote-card { border: 0; border-left: 3px solid var(--yellow); background: transparent; padding: .5rem 0 .5rem 1.75rem; }
+.quote-card blockquote { font: 300 clamp(1.3rem, 2vw, 1.6rem)/1.4 var(--sans); color: var(--ink); }
+
+/* ---------- Packages and prices ---------- */
+.package::before { display: none; }
+.package { border-top: 3px solid var(--green-2); }
+.package.intro { border-top-color: var(--orange); }
+.package.featured { background: var(--night); border: 1px solid var(--night); border-top: 3px solid var(--yellow); }
+.price { font: 600 2.6rem/1 var(--sans); letter-spacing: -0.03em; color: var(--ink); }
+.package.featured .price, .package.featured h3 { color: #fff; }
+.tag { border-radius: 0; background: var(--tulip-soft); }
+.package.featured .tag { background: var(--yellow); color: var(--ink); }
+.package.intro .tag, .spots-left { border-radius: 0; }
+.price-rows dd { color: var(--yellow); }
+
+/* ---------- Team, local, tags ---------- */
+.role { color: var(--green-2); }
+.avatar { border-radius: var(--radius); }
+.avatar-initials { background: var(--green); font-family: var(--sans); font-weight: 500; }
+.chips li { border-radius: 0; background: var(--tint); color: var(--ink); }
+.local-art { border-radius: 0; box-shadow: none; }
+
+/* ---------- Cases ---------- */
+.case-client { color: var(--green-2); }
+.case-body dt { color: var(--ink); }
+.case-quote { border-radius: 0; background: transparent; border-left: 3px solid var(--yellow); }
+.case-quote blockquote { font-family: var(--sans); font-weight: 300; color: var(--ink); }
+
+/* ---------- CTA band ---------- */
+.cta-box { border-radius: var(--radius); }
+.cta-box h2 { font-size: clamp(2.2rem, 5vw, 3.75rem); font-weight: 600; letter-spacing: -0.03em; }
+
+/* ---------- Contact form card with offset frame (Consultancy.eu) ---------- */
+.contact-form { position: relative; border-top: 1px solid var(--line); margin: 0 22px 22px 0; background: #fff; }
+.contact-form::after { content: ""; position: absolute; inset: 22px -22px -22px 22px; border: 3px solid var(--yellow); z-index: -1; }
+.contact-form:hover { border-top-color: var(--line); }
+.contact-form h2, .contact-direct h2 { font-weight: 600; }
+.field label, .contact-list dt { color: var(--ink); }
+.field input, .field textarea { border-radius: var(--radius); border: 1px solid #a3adbd; }
+.field input:focus, .field textarea:focus { border-color: var(--green-2); outline: 3px solid rgb(47 95 207 / .2); }
+
+/* ---------- Privacy ---------- */
+.prose h2 { font-weight: 600; }
+.prose p { color: var(--ink); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: #04060c; }
+.footer-brand { font-family: var(--sans); font-weight: 600; }
+.site-footer a:hover { color: var(--yellow); }
+.footer-bottom { border-top-color: rgb(255 255 255 / .1); }
+
+/* ---------- Focus stays visible on light and dark ---------- */
+:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; box-shadow: 0 0 0 6px var(--ink); }

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" role="img" aria-hidden="true">
+  <!-- Tulip fields in the Bollenstreek. Placeholder illustration: replace with a real photo (bollenstreek.webp). -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe3f5"/>
+      <stop offset="1" stop-color="#f6f1e4"/>
+    </linearGradient>
+    <g id="tulip">
+      <path d="M0 0 C-1 18 1 34 0 52" stroke="#3f7a3a" stroke-width="3" fill="none"/>
+      <path d="M0 40 C-10 30 -16 30 -20 22 C-10 22 -4 28 0 36Z" fill="#4f8f45"/>
+      <path d="M-11 -18 C-12 -4 -6 2 0 2 C6 2 12 -4 11 -18 L6 -10 L0 -20 L-6 -10Z"/>
+    </g>
+  </defs>
+  <rect width="600" height="450" fill="url(#sky)"/>
+  <circle cx="470" cy="80" r="34" fill="#f2bf5a" opacity=".9"/>
+  <!-- horizon trees and farm -->
+  <path d="M0 170 Q40 150 80 165 Q120 148 160 166 Q210 152 250 168 L250 180 L0 180Z" fill="#7da36b"/>
+  <rect x="300" y="146" width="44" height="30" fill="#b9573f"/>
+  <path d="M294 148 L322 126 L350 148Z" fill="#7a3a2c"/>
+  <path d="M340 175 Q420 158 500 170 Q560 160 600 168 L600 180 L340 180Z" fill="#8bb077"/>
+  <!-- field stripes converging to the horizon -->
+  <polygon points="0,180 600,180 600,450 0,450" fill="#5f9150"/>
+  <polygon points="0,180 60,180 -260,450 -400,450" fill="#e2483d"/>
+  <polygon points="60,180 120,180 -60,450 -220,450" fill="#5f9150"/>
+  <polygon points="120,180 180,180 120,450 -40,450" fill="#f2bf5a"/>
+  <polygon points="180,180 240,180 300,450 140,450" fill="#5f9150"/>
+  <polygon points="240,180 300,180 470,450 310,450" fill="#e86aa0"/>
+  <polygon points="300,180 360,180 640,450 480,450" fill="#5f9150"/>
+  <polygon points="360,180 420,180 820,450 660,450" fill="#ff6b35"/>
+  <polygon points="420,180 480,180 1000,450 840,450" fill="#5f9150"/>
+  <polygon points="480,180 540,180 1180,450 1020,450" fill="#8a5bc4"/>
+  <!-- foreground tulips -->
+  <g transform="translate(40 380)" fill="#e2483d"><use href="#tulip"/></g>
+  <g transform="translate(78 396) scale(.9)" fill="#f2bf5a"><use href="#tulip"/></g>
+  <g transform="translate(118 384)" fill="#e86aa0"><use href="#tulip"/></g>
+  <g transform="translate(470 392)" fill="#ff6b35"><use href="#tulip"/></g>
+  <g transform="translate(512 380) scale(1.1)" fill="#e2483d"><use href="#tulip"/></g>
+  <g transform="translate(556 398) scale(.9)" fill="#8a5bc4"><use href="#tulip"/></g>
+</svg>
